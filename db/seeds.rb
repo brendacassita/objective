@@ -42,11 +42,11 @@ Applicant.create(
            cover_letter:  "Lorem ipsum In veniam eiusmod voluptate dolore esse mollit qui sed occaecat sint voluptate occaecat id labore dolore quis sunt esse magna elit occaecat commodo ut cupidatat reprehenderit fugiat consectetur id ut incididunt dolore aliqua ex et proident sed.",
            job_id: 2)
 Applicant.create(            
-           name :  "Kraig Oga" ,
-           email :  "kraig@kraigoga.com" ,
-           website :  "kraigoga.com" ,
-           cover_letter :  "Lorem ipsum Dolore nisi minim dolore enim laborum magna nulla velit sed ut quis laborum occaecat esse pariatur Ut aliquip do enim cillum in adipisicing proident." ,
-           job_id : 2)
+           name: "Kraig Oga" ,
+           email:  "kraig@kraigoga.com" ,
+           website:  "kraigoga.com" ,
+           cover_letter:  "Lorem ipsum Dolore nisi minim dolore enim laborum magna nulla velit sed ut quis laborum occaecat esse pariatur Ut aliquip do enim cillum in adipisicing proident." ,
+           job_id: 2)
 Applicant.create(    
            name:  "Hilbert Price" ,
            email:  "hilbert@hilbertprice.com" ,
@@ -76,4 +76,6 @@ Skill.create(id: 11, name:  "Fireworks" , applicant_id: 6)
 Skill.create(id: 12, name:  "Illustrator" , applicant_id: 7)
 Skill.create(id: 13, name: "Fireworks",applicant_id: 8)
 
+puts "jobs: #{Job.all.count}"
 puts "applicants: #{Applicant.all.count}"
+puts "skills: #{Skill.all.count}"

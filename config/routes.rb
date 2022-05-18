@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   # root "articles#index"
   namespace :api do
     get 'applicants', to:'applicants#index'
+    get 'jobs', to: 'jobs#index'
+ 
 
     resources :applicants
     resources :jobs
