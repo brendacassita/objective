@@ -12,7 +12,7 @@ const Test = () => {
   const getJobs = async ()=>{
   try{
     let res = await axios.get('/api/jobs')
-    console.log(jobs)
+    console.log('jobs:', jobs)
     setJobs(res.data)
   }catch (err){
     alert('err getting jobs')
@@ -23,7 +23,7 @@ const Test = () => {
   return(
     <div>
       <h1>Test</h1>
-      {JSON.stringify(getJobs)}
+      {JSON.stringify(jobs)}
       </div>
   )
 }
