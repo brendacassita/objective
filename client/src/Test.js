@@ -4,7 +4,7 @@ import axios from 'axios'
 
 
 const Test = () => {
-  const [jobs, setJobs] = useState([])
+  const [jobs, setJobs] = useState("")
   useEffect(()=>{
     getJobs()
   }, [])
@@ -22,8 +22,9 @@ const Test = () => {
 
   return(
     <div>
-      <h1>Test</h1>
+      <h1>Jobs</h1>
       {JSON.stringify(jobs)}
+      {/* {getJobs()} */}
       </div>
   )
 }
