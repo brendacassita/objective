@@ -6,16 +6,19 @@ import axios from 'axios'
 const Test = () => {
   const [jobs, setJobs] = useState("")
   const [applicants, setApplicants] = useState("")
+  const [skills, setSkills] =  useState("")
+
   useEffect(()=>{
     getJobs()
     getApplicants()
+    getSkills()
   }, [])
 
   const getJobs = async ()=>{
   try{
     let res = await axios.get('/api/jobs')
     // console.log('jobs:', jobs)
-    console.log(res.data)
+    console.log("res", res.data)
     setJobs(res.data)
   }catch (err){
     alert('err getting jobs')
@@ -25,10 +28,18 @@ const Test = () => {
 const getApplicants = async () =>{
   try{
     let res = await axios.get('api/applicants')
-    console.log(res.data)
     setApplicants(res.data)
   }catch (err){
     alert('err getting applicants')
+  }
+}
+
+const getSkills = async () =>{
+  try{
+    let res = await axios.get('api/skills')
+    setSkills(res.data)
+  }catch (err){
+    alert('err getting skills')
   }
 }
 
@@ -36,7 +47,14 @@ const getApplicants = async () =>{
   return(
     <div>
       <h1>Jobs</h1>
-      {JSON.stringify(jobs)}
+      JOBS{JSON.stringify(jobs)}
+      <br/>
+      <hr/>
+      APPLICANTS{JSON.stringify(applicants)}
+      <hr/>
+      SKILLS{JSON.stringify(skills)}
+
+
       {/* {getJobs()} */}
       </div>
   )
