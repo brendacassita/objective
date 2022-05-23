@@ -1,9 +1,10 @@
 import react from "react"
 import { useState,useEffect } from "react"
 import axios from 'axios'
+import Job from './Job'
 
 
-const Test = () => {
+const Jobs = () => {
   const [jobs, setJobs] = useState("")
   const [applicants, setApplicants] = useState("")
   const [skills, setSkills] =  useState("")
@@ -44,6 +45,8 @@ const getSkills = async () =>{
 }
 
 
+
+
   return(
     <div>
       <h1>Jobs</h1>
@@ -54,10 +57,10 @@ const getSkills = async () =>{
       <hr/>
       SKILLS{JSON.stringify(skills)}
 
-
+      
       {/* {getJobs()} */}
       </div>
   )
 }
 
-export default Test
+export default Jobs
